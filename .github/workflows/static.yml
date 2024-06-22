@@ -17,7 +17,7 @@ jobs:
       run: git config --global --add safe.directory /var/github-action-test
     
     - name: Set permissions
-      run: sudo chown -R $USER:$USER /var/github-action-test/.git
+      run: sudo chown -R $USER:$USER /var/github-action-test
     
     - name: Deploy
       run: |
