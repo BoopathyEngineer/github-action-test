@@ -1,0 +1,43 @@
+
+name: Deploy Django to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Deploy
+      run: |
+        sudo su
+        ls
+        pwd
+        cd /var/www/html
+    # - name: Set up Python
+    #   uses: actions/setup-python@v2
+    #   with:
+    #     python-version: '3.x'
+
+    # - name: Install dependencies
+    #   run: |
+    #     python -m venv venv
+    #     source venv/bin/activate
+    #     pip install -r requirements.txt
+
+    # - name: Run tests
+    #   run: |
+    #     source venv/bin/activate
+    #     python manage.py test
+
+
+        # source venv/bin/activate
+        # pip install -r requirements.txt
+        # python manage.py migrate
+        # python manage.py collectstatic --noinput
+        # sudo systemctl restart apache2
