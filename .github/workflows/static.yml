@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v2
     - name: Deploy
       run: |
-        sudo su
+    
         ls
         pwd
         cd /var/www/html
