@@ -15,10 +15,9 @@ jobs:
       uses: actions/checkout@v2
     - name: Deploy
       run: |
-    
-        ls
-        pwd
-        cd /var/www/html
+        cd /var/github-action-test
+        git pull origin main
+        cat index.html
     # - name: Set up Python
     #   uses: actions/setup-python@v2
     #   with:
